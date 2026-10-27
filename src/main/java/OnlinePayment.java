@@ -6,7 +6,7 @@ public class OnlinePayment extends PaymentType{
 
     @Override
     public String sendNotification(){
-        return channel.sendMessage("");
+        return channel.sendMessage("Online Payment Complete");
     }
 
 }
