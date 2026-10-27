@@ -12,4 +12,13 @@ public class TestCashOnDeliveryPayment {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testSendCashOnDeliveryPaymentNotificationThroughSMS(){
+        PaymentType payment = new CashOnDeliveryPayment(new SmsChannel());
+
+        String expected = "Sending message through SMS: Cash On Delivery Payment Complete";
+        String actual = payment.sendNotification();
+        assertEquals(expected, actual);
+    }
+
 }
