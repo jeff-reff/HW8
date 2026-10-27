@@ -12,4 +12,13 @@ public class TestBitcoinPayment {
         String actual = payment.sendNotification();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testBitcoinPaymentThroughSMS(){
+        PaymentType payment = new BitcoinPayment(new SmsChannel());
+
+        String expected = "Sending message through SMS: Bitcoin Payment Complete";
+        String actual = payment.sendNotification();
+        assertEquals(expected, actual);
+    }
 }
