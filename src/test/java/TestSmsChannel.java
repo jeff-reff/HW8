@@ -8,7 +8,7 @@ public class TestSmsChannel {
 
     @ParameterizedTest
     @ValueSource(strings = "Payment Complete")
-    public void sendMessage(String message){
+    public void testSendMessage(String message){
         String expected = "Sending message through SMS: " + message;
         String actual = smsChannel.sendMessage(message);
         assertEquals(expected, actual);

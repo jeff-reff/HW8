@@ -9,7 +9,7 @@ public class TestEmailChannel {
 
     @ParameterizedTest
     @ValueSource(strings = "Payment Complete")
-    public void sendMessage(String message){
+    public void testSendMessage(String message){
         String expected = "Sending message through email: " + message;
         String actual = emailChannel.sendMessage(message);
         assertEquals(expected, actual);

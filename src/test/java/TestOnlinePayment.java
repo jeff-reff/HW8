@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestOnlinePayment {
 
     @Test
-    public void sendOnlinePaymentNotificationThroughEmail(){
+    public void testSendOnlinePaymentNotificationThroughEmail(){
         PaymentType payment = new OnlinePayment(new EmailChannel());
 
         String expected = "Sending message through email: Online Payment Complete";
@@ -13,7 +13,7 @@ public class TestOnlinePayment {
     }
 
     @Test
-    public void sendOnlinePaymentNotificationThroughSMS(){
+    public void testSendOnlinePaymentNotificationThroughSMS(){
         PaymentType payment = new OnlinePayment(new SmsChannel());
 
         String expected = "Sending message through SMS: Online Payment Complete";
