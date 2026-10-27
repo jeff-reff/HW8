@@ -2,7 +2,7 @@ public class EmailChannel implements PaymentNotificationChannel{
 
     @Override
     public String sendMessage(String message){
-        return "";
+        return "Sending message through email: " + message;
     }
 
 }
