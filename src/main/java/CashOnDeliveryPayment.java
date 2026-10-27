@@ -6,7 +6,7 @@ public class CashOnDeliveryPayment extends PaymentType{
 
     @Override
     public String sendNotification(){
-        return "";
+        return channel.sendMessage("Cash On Delivery Payment Complete");
     }
 
 }

@@ -7,7 +7,7 @@ public class TestCashOnDeliveryPayment {
     public void testSendCashOnDeliveryPaymentNotificationThroughEmail(){
         PaymentType payment = new CashOnDeliveryPayment(new EmailChannel());
 
-        String expected = "Send message through email: Cash On Delivery Payment Complete";
+        String expected = "Sending message through email: Cash On Delivery Payment Complete";
         String actual = payment.sendNotification();
         assertEquals(expected, actual);
     }
