@@ -6,7 +6,7 @@ public class BitcoinPayment extends PaymentType{
 
     @Override
     public String sendNotification(){
-        return "";
+        return channel.sendMessage("Bitcoin Payment Complete");
     }
 
 }
